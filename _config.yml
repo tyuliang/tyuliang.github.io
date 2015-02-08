@@ -1,0 +1,80 @@
+# Configurations
+markdown: kramdown
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+highlighter: pygments
+
+safe : false
+
+# Permalinks
+permalink:        /blog/:year/:month/:day/:title
+
+# Setup
+title:            '亮亮的博客'
+tagline:          '全新的METRO博客'
+description:      '欢迎来到本站'
+url:              'http://tanyuliang.gq'
+baseurl:          ''
+
+# Navigation
+navigation:
+- text: 关于
+  url: /about/
+- text: 简历
+  url: /resume/
+- text: 博客
+  url: /blog/
+- text: 标签
+  url: /tags/
+- text: 文章
+  url : /archive/
+- text: 搜索
+  url : /search
+
+# Author Details
+author:         '亮亮'
+linkedin:       'https://www.linkedin.com/pub/%E4%BA%AE-%E4%BA%AE/b0/b66/524'
+tqq:        'http://t.qq.com/lycanyuliang'
+facebook:   'https://www.facebook.com/pages/%E4%BA%AE%E4%BA%AE/764307380315940'
+sina:          'http://weibo.com/u/3286043313'
+
+
+#if footer-links-visible is 'true' the svg-icons will be shown top on the copy right. 
+#else the svg icons will not exist
+footersvg: 'true'
+
+footer-links:
+  dribbble: 
+  email: tanyuliang2@gmail.com
+  facebook: 'pages/%E4%BA%AE%E4%BA%AE/764307380315940'
+  flickr: 
+  github: tyuliang
+  instagram: 
+  linkedin: '%E4%BA%AE-%E4%BA%AE/b0/b66/524'
+  pinterest: 
+  rss: /feed.xml# just type anything here for a working RSS icon, make sure you set the "url" above!
+  google: 111441740197616527374
+  twitter: tanyuliang
+  stackoverflow:  # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+
+
+# Blog Configurations
+paginate: 10 # Posts per page on the blog index
+paginate_path: '/blog/page:num'
+destination: ./_site
+
+comments :
+    provider : duoshuo
+    duoshuo : 
+      short_name :  'tyl602'
+
+# Custom vars
+version:          0.7.10
+
+ftp_host: 'tyl.52pojie.cc'
+ftp_dir: '/web'
+ftp_passive: false
+
+# optional
+ftp_port: 21                  # default 21
+ftp_username: 'tyl'     # default read from stdin
+ftp_password: '22842218' # default read from stdin

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+      {% include mobilemenu.html %}
+      {{ content }}
+      
+      
+      
+	  {% if page.title == "Home" %}
+		  <script src="http://7nar2o.com5.z0.glb.clouddn.com/assets/js/MetroJs.min.js"></script>
+	  {% endif %}
+
+
+		  <a href="#" class="scrollToTop"></a>
+                   {% include scroll-up.html %}
+
+  </body>
+</html>
+

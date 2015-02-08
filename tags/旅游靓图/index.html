@@ -1,0 +1,35 @@
+---
+layout: page
+title: 标签 - 博客信息
+description: 该标签下的文章
+theme: red
+---
+<div class="row">
+<div class="col-md-2">
+</div>
+<div class="col-md-8">
+<section class="tags">
+<ul class="nav nav-pills">
+</ul>
+</section>
+</div>
+<div class="col-md-2">
+</div>
+</div>
+<hr/>
+<div class="row">
+<div class="col-md-12">
+<section>
+<h3>旅游靓图</h3>
+<ul>
+{% for post in site.posts %}
+{% for otag in post.tags %}
+{% if otag == '旅游靓图' %}
+<li class="alink"><a href="{{ post.url }}" class="red-link">{{ post.title }}</a></li>
+{% endif %}
+{% endfor %}
+{% endfor %}
+</ul>
+</section>
+</div>
+</div>

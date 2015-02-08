@@ -1,0 +1,42 @@
+---
+layout: page
+title: 搜索
+description: Search for Jekyll Metro
+---
+<form class="searh-form" role="form">
+<div id="search-form">
+	<input class="search form-control" name="q" placeholder="搜索..." type="text">
+</div>
+</form>
+<div class="search-message"></div>
+<div id="results">
+  <h2 class="results-title"></h2>
+  <ul class="results-list"></ul>
+</div>
+<script>
+$(document).ready(function() {
+    var qry = GetURLParameter('q');
+		var data = [
+		{% for post in site.posts %}
+		{
+		"title"    : "{{ post.title | escape }}",
+		"category" : "{{ post.category }}",
+		"tags"	   : "{{post.tags | array_to_sentence_string}}",
+		"url"      : "{{ post.url }}",
+		"date"     : "{{ post.date | date: "%B %d, %Y" }}"
+		} {% if forloop.last %}{% else %},{% endif %}
+		{% endfor %}
+		];
+    var x = $(".search").jekyllSearch({
+			      jsonData            : null,
+            template            : '<li><h4><a href="{url}" title="{title}">{title}</a></h4>撰写于 {date}<br>标签: {tags} </li>',
+            searchResults       : '#results',
+            searchResultsTitle  : '<h3>搜索结果</h3>',
+            limit               : '10',
+            noResults           : '<h3>找不到任何有关这个的内容</h3>建议：<ul><li>确保所有关键字拼写正确。</li><li>尝试其他关键字。</li><li>尝试更宽泛的关键字。</li><li>尽量少的关键词。</li></ul>'
+     });
+     if(qry) {
+			$(".search").val(qry).trigger('keyup').focus();
+     }
+});
+</script>

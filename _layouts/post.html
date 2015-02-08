@@ -1,0 +1,79 @@
+---
+layout: master
+---
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="hidden-xs col-md-2 col-sm-3 blue sidebar">
+      {% include sidemenu.html %}
+    </div> <!-- Side column -->
+    <div class="col-md-10 col-sm-9 col-md-offset-2 col-sm-offset-3">
+      <article class="col-md-12 col-xs-12 justified">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="publish-tag">
+          <span class="fa fa-calendar"></span>&nbsp;撰写于 {{ page.date | date: "%B %d, %Y" }}
+        </div>
+        {{ content }}
+        <br/>
+         <script type="text/javascript" id="wumiiRelatedItems"></script>
+<script type="text/javascript">
+    var wumiiPermaLink = "{{ site.url }}{{ page.url }}"; //请用代码生成文章永久的链接
+    var wumiiTitle = "{{ page.title }}"; //请用代码生成文章标题
+    var wumiiTags = "{{ page.tags }}"; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
+    var wumiiCategories = ["{{ page.categories }}"]; //请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]
+    var wumiiSitePrefix = "{{ site.url }}";
+    var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
+</script>
+<script type="text/javascript" src="http://widget.wumii.cn/ext/relatedItemsWidget"></script>
+
+        <span class="fa fa-tag"></span>标签:
+        {% if page.tags %}
+          {% for tag in page.tags %}		
+            <a href="/tags/{{tag}}"><span class="label label-primary">{{tag}}</span></a>
+          {% endfor %}
+        {% else %}  
+          None
+        {% endif %}
+        <br/><br/>
+        <h4>评论:</h4>
+        <!-- Duoshuo Comment BEGIN -->
+    <div id="comments">
+        <div class="ds-thread" {% if page.id %}data-thread-key="{{ page.id }}"{% endif %}  data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
+    </div>
+<!-- Duoshuo Comment END -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"tyl602"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+      </article> 
+      
+      <div class="row">
+        <div class="col-sm-6 col-xs-6 text-left">
+       	{% if page.previous.url %}
+        	<a class="btn btn-blue" href="{{page.previous.url}}">← 上一篇</a>
+        {% else %}
+        	<span class="btn btn-blue disabled">← 上一篇</span>
+        {% endif %}
+        </div>
+        <div class="col-sm-6 col-xs-6 text-right">
+        {% if page.next.url %}
+        	<a class="btn btn-blue" href="{{page.next.url}}">下一篇 →</a>
+        {% else %}
+        	<span class="btn btn-blue disabled">下一篇 →</span>
+        {% endif %} 
+        </div>
+      </div>
+      
+      {% include footer.html %}  
+    </div> <!-- content area column -->
+  </div> <!-- row  -->
+</div> <!-- container -->
