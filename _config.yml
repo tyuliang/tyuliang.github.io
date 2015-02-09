@@ -69,12 +69,3 @@ comments :
 
 # Custom vars
 version:          0.7.10
-
-ftp_host: 'tyl.52pojie.cc'
-ftp_dir: '/web'
-ftp_passive: false
-
-# optional
-ftp_port: 21                  # default 21
-ftp_username: 'tyl'     # default read from stdin
-ftp_password: '22842218' # default read from stdin
