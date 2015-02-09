@@ -60,7 +60,6 @@ footer-links:
 # Blog Configurations
 paginate: 10 # Posts per page on the blog index
 paginate_path: '/blog/page:num'
-destination: ./_site
 
 comments :
     provider : duoshuo
