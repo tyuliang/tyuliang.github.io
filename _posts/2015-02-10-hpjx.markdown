@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "黄埔军校"
+date:   2015-02-10 16:26:01
+categories: travel
+tag: 旅游靓图
+---
+
+![黄埔军校1](http://7nar2o.com5.z0.glb.clouddn.com/hpjx/file-page1.png)
+
+![黄埔军校2](http://7nar2o.com5.z0.glb.clouddn.com/hpjx/file-page2.png)
+
+![黄埔军校3](http://7nar2o.com5.z0.glb.clouddn.com/hpjx/file-page3.png)
