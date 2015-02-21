@@ -27,7 +27,10 @@ layout: master
         {% endif %}
         <br/><br/>
         <h4>评论:</h4>
-      <div id="uyan_frame"></div>
+      <!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}"></div>
+    <!-- 多说评论框 end -->
+
       </article> 
       
       <div class="row">
