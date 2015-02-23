@@ -39,6 +39,15 @@ var t1 = new Date().getTime();
   <link rel="stylesheet" href="http://www.cdnjs.net/ajax/libs/??twitter-bootstrap/3.3.2/css/bootstrap.min.css,nprogress/0.1.6/nprogress.min.css">
   <link rel="stylesheet" href="http://7nar2o.com5.z0.glb.clouddn.com/assets/css/app.css">
   <link rel="stylesheet" href="http://7nar2o.com5.z0.glb.clouddn.com/assets/css/github.css">
+  <link rel="stylesheet" href="http://7nar2o.com5.z0.glb.clouddn.com/assets/css/bcg.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/metrojs/0.9.72/MetroJs.min.css">
+  
+    <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="128x128" href="http://7nar2o.com5.z0.glb.clouddn.com/favicon-128.png">
+  <link rel="shortcut icon" href="http://7nar2o.com5.z0.glb.clouddn.com/favicon-16.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
 <!--[if IE]>
 <script src="http://www.cdnjs.net/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -64,7 +73,14 @@ var t1 = new Date().getTime();
 　　　　　});
 　　</script>
   <script type="text/javascript" src="http://7nar2o.com5.z0.glb.clouddn.com/assets/js/jekyll-search.js" async="async"></script>
-  <script type="text/javascript" src="http://7nar2o.com5.z0.glb.clouddn.com/assets/js/app.js" async="async"></script>
+  <script type="text/javascript">
+function GetURLParameter(key) {
+   var re=new RegExp('(?:\\?|&)'+key+'=(.*?)(?=&|$)','gi');
+   var r=[], m;
+   while ((m=re.exec(document.location.search)) != null) r.push(m[1]);
+   return r;
+}
+  </script>
 
 
   {% if page.title == "Home" %}
@@ -82,8 +98,6 @@ var t1 = new Date().getTime();
    document.write("<style>body {background: url("+"http://7nar2o.com5.z0.glb.clouddn.com/assets/images/"+backgroundImage[random]+") no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;color:#fff;background-color:#333;}</style>")
     
    </script>
-  <link rel="stylesheet" href="http://7nar2o.com5.z0.glb.clouddn.com/assets/css/bcg.css">
-  <link rel="stylesheet" href="http://cdn.jsdelivr.net/metrojs/0.9.72/MetroJs.min.css">
   {% endif %}
 
   {% if page.bloghome == true %}
@@ -120,12 +134,4 @@ var t1 = new Date().getTime();
   src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(http://fontstatic.useso.com/s/opensans/v10/PRmiXeptR36kaC0GEAetxhbnBKKEOwRKgsHDreGcocg.woff) format('woff');
 }
   </style>
-
-
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="128x128" href="http://7nar2o.com5.z0.glb.clouddn.com/favicon-128.png">
-  <link rel="shortcut icon" href="http://7nar2o.com5.z0.glb.clouddn.com/favicon-16.ico">
-
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 </head>
