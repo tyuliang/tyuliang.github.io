@@ -24,7 +24,7 @@ var duoshuoQuery = {short_name:"tanyuliang"};
 	</script>
 <!-- 多说公共JS代码 end -->
 
-<script type="text/javascript">
+<script type="text/javascript" async="async">
     var wumiiPermaLink = "{{ site.url }}{{ page.url }}"; //请用代码生成文章永久的链接
     var wumiiTitle = "{{ page.title }}"; //请用代码生成文章标题
     var wumiiTags = "{{ page.tags }}"; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
@@ -70,11 +70,11 @@ var duoshuoQuery = {short_name:"tanyuliang"};
                   <div>{% include svg-icons.html %}</div>
             {% endif %}
             &copy; {{ site.time | date: '%Y' }} - {{site.author}}. All rights reserved<br/>
-            Built using 
+            本站使用 
             {% if page.theme And page.theme != "" And page.theme != nil %}
-            <a class="{{page.theme}}-link" href="http://jekyllrb.com/">Jekyll</a>
+            <a class="{{page.theme}}-link" href="http://jekyllcn.com/">Jekyll CN</a>
             {% else %}
-            <a href="http://jekyllrb.com/">Jekyll </a>
+            <a href="http://jekyllcn.com/">Jekyll CN</a>
             {% endif %}
        
 
