@@ -1,44 +1,37 @@
 <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta charset="UTF-8">
-  {% if page.description %}
-	<meta name="description" content="{{page.description}}">
+<link href="http://gmpg.org/xfn/11" rel="profile">
+<meta charset="UTF-8">
+{% if page.description %}
+<meta name="description" content="{{page.description}}">
+{% else %}
+<meta name="description" content="{{site.description}}">
+{% endif %}
+<meta name="author" content="{{site.author}}">
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>
+  {% if page.title == "Home" %}
+    {{ site.title }} &middot; {{ site.tagline }}
   {% else %}
-  <meta name="description" content="{{site.description}}">
+    {{ page.title }} &middot; {{ site.title }}
   {% endif %}
-	<meta name="author" content="{{site.author}}">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
-  </title>
-
-  {% if page.path contains '_posts' %}
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" value="summary">
-  <!-- Open Graph data -->
-  <meta property="og:title" content="{{page.title}}" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="{{page.url}}" />
-  <meta property="og:description" content="{{page.description}}" />
-  {% endif %}
-
+</title>
+{% if page.path contains '_posts' %}
+<!-- Twitter Card data -->
+<meta name="twitter:card" value="summary">
+<!-- Open Graph data -->
+<meta property="og:title" content="{{page.title}}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{page.url}}" />
+<meta property="og:description" content="{{page.description}}" />
+{% endif %}
 <script language=javascript async="async"> 
 var t1 = new Date().getTime(); 
 </script> 
-
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="http://www.cdnjs.net/ajax/libs/??twitter-bootstrap/3.3.2/css/bootstrap.min.css,nprogress/0.1.6/nprogress.min.css">
-  <style type="text/css">
-  /*、Scroll-up-button*/
+<!-- CSS -->
+<link rel="stylesheet" href="http://www.cdnjs.net/ajax/libs/??twitter-bootstrap/3.3.2/css/bootstrap.min.css,nprogress/0.1.6/nprogress.min.css">
+<style type="text/css">
+/*、Scroll-up-button*/
 .scrollToTop{
     width:48px; 
     height:48px;
@@ -346,18 +339,19 @@ a.orange-link:focus {
 .vi { color: #008080 } /* Name.Variable.Instance */
 .il { color: #009999 } /* Literal.Number.Integer.Long */
 </style>
-  
-    <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="128x128" href="http://7nar2o.com5.z0.glb.clouddn.com/favicon-128.png">
-  <link rel="shortcut icon" href="http://7nar2o.com5.z0.glb.clouddn.com/favicon-16.ico">
-
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
-
+<!-- Icons -->
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="http://7nar2o.com5.z0.glb.clouddn.com/favicon-128.png">
+<link rel="shortcut icon" href="http://7nar2o.com5.z0.glb.clouddn.com/favicon-16.ico">
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 <!--[if IE]>
 <script src="http://www.cdnjs.net/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 <![endif]-->
-<script src="http://www.cdnjs.net/ajax/libs/labjs/2.0.3/LAB.min.js"></script>
+<!-- lab.js -->
+<script type="text/javascript">
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('(2(o){6 K=o.$1w,y="22",z="23",u="24",A="26",B="21",C=/^[^?#]*\\//.1B(1z.20)[0],D=/^\\w+\\:\\/\\/\\/?[^\\/]+/.1B(C)[0],i=11.1M||11.1W("1M"),L=(o.1K&&1s.1t.1n.1b(o.1K)=="[1p 1V]")||("1X"1r 11.1Y.1Z),q=11.1q("12"),E=1F q.1A=="27",r=E||(q.13&&q.13=="28"),F=!r&&q.1I===X,M=!r&&!F&&!L;2 G(a){5 1s.1t.1n.1b(a)=="[1p 2f]"}2 H(a){5 1s.1t.1n.1b(a)=="[1p 2g]"}2 N(a,c){6 b=/^\\w+\\:\\/\\//;3(/^\\/\\/\\/?/.1h(a)){a=1z.1U+a}Z 3(!b.1h(a)&&a.1H(0)!="/"){a=(c||"")+a}5 b.1h(a)?a:((a.1H(0)=="/"?D:C)+a)}2 s(a,c){16(6 b 1r a){3(a.2i(b)){c[b]=a[b]}}5 c}2 O(a){6 c=7;16(6 b=0;b<a.15.8;b++){3(a.15[b].17&&a.15[b].1f){c=X;a.15[b].1f();a.15[b].1f=10}}5 c}2 t(a,c,b,d){a.1x=a.19=2(){3((a.13&&a.13!="1N"&&a.13!="1E")||c[b])5;a.1x=a.19=10;d()}}2 I(a){a.17=a.9=X;16(6 c=0;c<a.1e.8;c++){a.1e[c]()}a.1g=[];a.1e=[]}2 P(d,f,e,g,h){1L(2(){6 a,c=f.1u,b;3("2e"1r i){3(!i[0]){1L(Y.2d,25);5}i=i[0]}a=11.1q("12");3(f.14)a.14=f.14;3(f.1a)a.1a=f.1a;3(h){3(r){e.1m=a;3(E){a.1A=X;a.29=g}Z{a.19=2(){3(a.13=="1E")g()}}a.W=c}Z 3(h&&c.2a(D)==0&&d[y]){b=2b 2c();b.19=2(){3(b.13==4){b.19=2(){};e.1c=b.2j+"\\n//@ 1O="+c;g()}};b.1T("1P",c);b.1S()}Z{a.14="1c/1R-12";t(a,e,"17",2(){i.1Q(a);g()});a.W=c;i.1l(a,i.1j)}}Z 3(F){a.1I=7;t(a,e,"9",g);a.W=c;i.1l(a,i.1j)}Z{t(a,e,"9",g);a.W=c;i.1l(a,i.1j)}},0)}2 J(){6 l={},Q=r||M,n=[],p={},m;l[y]=X;l[z]=7;l[u]=7;l[A]=7;l[B]="";2 R(a,c,b){6 d;2 f(){3(d!=10){d=10;I(b)}}3(p[c.W].9)5;3(!a[u])p[c.W].9=X;d=b.1m||11.1q("12");3(c.14)d.14=c.14;3(c.1a)d.1a=c.1a;t(d,b,"9",f);3(b.1m){b.1m=10}Z 3(b.1c){d.1x=d.19=10;d.1c=b.1c}Z{d.W=c.1u}i.1l(d,i.1j);3(b.1c){f()}}2 S(c,b,d,f){6 e,g,h=2(){b.1J(b,2(){R(c,b,e)})},j=2(){b.1C(b,d)};b.W=N(b.W,c[B]);b.1u=b.W+(c[A]?((/\\?.*$/.1h(b.W)?"&1G":"?1G")+~~(2h.2E()*2F)+"="):"");3(!p[b.W])p[b.W]={1D:[],9:7};g=p[b.W].1D;3(c[u]||g.8==0){e=g[g.8]={17:7,9:7,1g:[h],1e:[j]};P(c,b,e,((f)?2(){e.17=X;16(6 a=0;a<e.1g.8;a++){e.1g[a]()}e.1g=[]}:2(){I(e)}),f)}Z{e=g[0];3(e.9){j()}Z{e.1e.1k(j)}}}2 v(){6 e,g=s(l,{}),h=[],j=0,w=7,k;2 T(a,c){a.17=X;a.1f=c;x()}2 U(a,c){a.17=a.9=X;a.1f=10;16(6 b=0;b<c.15.8;b++){3(!c.15[b].9)5}c.9=X;x()}2 x(){2k(j<h.8){3(G(h[j])){2z{h[j++]()}2x(2p){}1i}Z 3(!h[j].9){3(O(h[j]))1i;2l}j++}3(j==h.8){w=7;k=7}}2 V(){3(!k||!k.15){h.1k(k={15:[],9:X})}}e={12:2(){16(6 f=0;f<Y.8;f++){(2(a,c){6 b;3(!H(a)){c=[a]}16(6 d=0;d<c.8;d++){V();a=c[d];3(G(a))a=a();3(!a)1i;3(H(a)){b=[].1y.1b(a);b.2t(d,1);[].2s.1d(c,b);d--;1i}3(1F a=="2w")a={W:a};a=s(a,{17:7,1J:T,9:7,1C:U});k.9=7;k.15.1k(a);S(g,a,k,(Q&&w));w=X;3(g[z])e.18()}})(Y[f],Y[f])}5 e},18:2(){3(Y.8>0){16(6 a=0;a<Y.8;a++){h.1k(Y[a])}k=h[h.8-1]}Z k=7;x();5 e}};5{12:e.12,18:e.18,1o:2(a){s(a,g);5 e}}}m={2o:2(a){s(a,l);5 m},1o:2(){5 v().1o.1d(10,Y)},12:2(){5 v().12.1d(10,Y)},18:2(){5 v().18.1d(10,Y)},2r:2(){n[n.8]={14:"12",1v:[].1y.1b(Y)};5 m},2v:2(){n[n.8]={14:"18",1v:[].1y.1b(Y)};5 m},2u:2(){6 a=m,c=n.8,b=c,d;16(;--b>=0;){d=n.2q();a=a[d.14].1d(10,d.1v)}5 a},2m:2(){o.$1w=K;5 m},2n:2(){5 J()}};5 m}o.$1w=J();(2(a,c,b){3(11.13==10&&11[a]){11.13="2C";11[a](c,b=2(){11.2A(c,b,7);11.13="1N"},7)}})("2y","2B")})(2D);',62,166,'||function|if||return|var|false|length|finished|||||||||||||||||||||||||||||||||||||||||||||||||src|true|arguments|else|null|document|script|readyState|type|scripts|for|ready|wait|onreadystatechange|charset|call|text|apply|finished_listeners|exec_trigger|ready_listeners|test|continue|firstChild|push|insertBefore|elem|toString|setOptions|object|createElement|in|Object|prototype|real_src|args|LAB|onload|slice|location|preload|exec|finished_cb|items|loaded|typeof|_|charAt|async|ready_cb|opera|setTimeout|head|complete|sourceURL|GET|removeChild|cache|send|open|protocol|Opera|getElementsByTagName|MozAppearance|documentElement|style|href|BasePath|UseLocalXHR|AlwaysPreserveOrder|AllowDuplicates||CacheBust|boolean|uninitialized|onpreload|indexOf|new|XMLHttpRequest|callee|item|Function|Array|Math|hasOwnProperty|responseText|while|break|noConflict|sandbox|setGlobalDefaults|err|shift|queueScript|splice|unshift|runQueue|queueWait|string|catch|addEventListener|try|removeEventListener|DOMContentLoaded|loading|this|random|1E9'.split('|'),0,{}))
+</script>
+<!-- lab.js -->
 <script src="http://www.cdnjs.net/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript">
 　　　　$LAB
@@ -377,6 +371,7 @@ a.orange-link:focus {
 });
 　　　　　});
 　　</script>
+<!-- jekyllSearch -->
   <script type="text/javascript">
   (function($) {
     $.fn.jekyllSearch = function(options) {
@@ -487,6 +482,7 @@ a.orange-link:focus {
     }
 }(jQuery));
 </script>
+<!-- app.js -->
   <script type="text/javascript">
 function GetURLParameter(key) {
    var re=new RegExp('(?:\\?|&)'+key+'=(.*?)(?=&|$)','gi');
@@ -512,6 +508,7 @@ function GetURLParameter(key) {
     
    </script>
   {% endif %}
+<!-- index css -->
   <style type="text/css">
   .bord {
    border: 1px solid #fff;
@@ -676,7 +673,7 @@ and (max-width : 320px) {
         }
   </style>
   {% endif %}
-
+<!-- fonts -->
   <style type="text/css">
   @font-face {
   font-family: 'Open Sans';
